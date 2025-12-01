@@ -20,10 +20,9 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-brand-black/90 backdrop-blur-md py-4 border-b border-white/10' : 'bg-transparent py-6'
-      }`}
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-brand-black/90 backdrop-blur-md py-4 border-b border-white/10' : 'bg-transparent py-6'
+        }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         <div className="text-2xl font-black tracking-tighter text-white">
@@ -33,15 +32,15 @@ const Header: React.FC = () => {
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a 
-              key={link.name} 
+            <a
+              key={link.name}
               href={link.href}
               className="text-sm font-medium text-gray-300 hover:text-white transition-colors"
             >
               {link.name}
             </a>
           ))}
-          <a 
+          <a
             href="https://wa.me/5527992241844"
             target="_blank"
             rel="noopener noreferrer"
@@ -52,7 +51,7 @@ const Header: React.FC = () => {
         </nav>
 
         {/* Mobile Toggle */}
-        <button 
+        <button
           className="md:hidden text-white"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
@@ -63,9 +62,9 @@ const Header: React.FC = () => {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="absolute top-full left-0 right-0 bg-brand-black border-b border-white/10 p-6 md:hidden flex flex-col gap-4">
-           {navLinks.map((link) => (
-            <a 
-              key={link.name} 
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
               href={link.href}
               className="text-lg font-medium text-gray-300 hover:text-brand-pink transition-colors"
               onClick={() => setMobileMenuOpen(false)}
@@ -73,7 +72,7 @@ const Header: React.FC = () => {
               {link.name}
             </a>
           ))}
-           <a 
+          <a
             href="https://wa.me/5527992241844"
             target="_blank"
             rel="noopener noreferrer"
