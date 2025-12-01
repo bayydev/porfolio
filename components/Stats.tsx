@@ -5,7 +5,7 @@ const stats: StatItem[] = [
   { value: "5+", label: "Anos de", subLabel: "Experiência" },
   // { value: "120+", label: "Projetos", subLabel: "Entregues" }, // Removed as requested
   { value: "30%", label: "Aumento Médio", subLabel: "em Vendas" },
-  { value: "24h", label: "Suporte", subLabel: "Dedicado" },
+  { value: "9h-22h", label: "Suporte", subLabel: "Seg-Sáb" },
 ];
 
 const Stats: React.FC = () => {
