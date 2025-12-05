@@ -9,7 +9,7 @@ import Contact from './components/Contact';
 
 const App: React.FC = () => {
   return (
-    <div className="bg-black min-h-screen text-white font-sans selection:bg-brand-pink selection:text-white">
+    <div className="bg-black min-h-screen text-white font-sans selection:bg-brand-cyan selection:text-white">
       <Header />
       <main>
         <Hero />

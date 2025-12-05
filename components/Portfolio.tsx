@@ -7,12 +7,12 @@ import IMAGES from '../assets/index';
 const projects: ProjectItem[] = [
   {
     id: 1,
-    title: "Açaí Delivery — Estratégia Visual",
+    title: "Imobiliária — Estratégia Visual",
     category: "Social Media",
     image: IMAGES.acai.cover,
     gallery: IMAGES.acai.gallery
   },
-  { id: 2, title: "Projeto Confidencial", category: "Identidade Visual", image: IMAGES.confidencial1.cover },
+  { id: 2, title: "Imobiliária — Social Media", category: "Social Media", image: IMAGES.confidencial1.cover },
   { id: 3, title: "Projeto Confidencial", category: "Branding & Social", image: IMAGES.confidencial2.cover },
   { id: 4, title: "Projeto Confidencial", category: "Design Gráfico", image: IMAGES.confidencial3.cover },
 ];
@@ -109,7 +109,7 @@ const Portfolio: React.FC = () => {
   }, [selectedProject, closeProject, changeImage]);
 
   return (
-    <section id="portfolio" className="py-24 bg-brand-dark relative">
+    <section id="portfolio" className="py-32 bg-brand-dark relative">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
@@ -120,7 +120,7 @@ const Portfolio: React.FC = () => {
               Uma curadoria dos projetos que geraram mais impacto e vendas para meus clientes.
             </p>
           </div>
-          <a href="https://be.net/visualcaua" target="_blank" rel="noopener noreferrer" className="text-brand-pink font-bold hover:text-white transition-colors">
+          <a href="https://be.net/visualcaua" target="_blank" rel="noopener noreferrer" className="text-brand-cyan font-bold hover:text-white transition-colors">
             Ver Portfólio Completo &rarr;
           </a>
         </div>
@@ -144,8 +144,8 @@ const Portfolio: React.FC = () => {
 
                 {isLocked ? (
                   <div className="absolute inset-0 bg-black/80 flex flex-col items-center justify-center p-6 text-center transition-opacity">
-                    <div className="bg-brand-pink/20 p-4 rounded-full mb-4">
-                      <Lock className="text-brand-pink w-8 h-8" />
+                    <div className="bg-brand-cyan/20 p-4 rounded-full mb-4">
+                      <Lock className="text-brand-cyan w-8 h-8" />
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-2">Projeto Confidencial</h3>
                     <p className="text-gray-400 text-sm mb-6 max-w-xs">Este projeto faz parte do portfólio completo.</p>
@@ -157,11 +157,11 @@ const Portfolio: React.FC = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                     <div className="flex justify-between items-end">
                       <div>
-                        <span className="text-brand-pink font-bold text-sm tracking-wider uppercase mb-1 block">{project.category}</span>
+                        <span className="text-brand-cyan font-bold text-sm tracking-wider uppercase mb-1 block">{project.category}</span>
                         <h3 className="text-3xl font-bold text-white">{project.title}</h3>
                       </div>
                       {project.gallery && (
-                        <div className="bg-white/10 p-3 rounded-full backdrop-blur-sm group-hover:bg-brand-pink transition-colors">
+                        <div className="bg-white/10 p-3 rounded-full backdrop-blur-sm group-hover:bg-brand-cyan transition-colors">
                           <ZoomIn className="text-white" size={24} />
                         </div>
                       )}
@@ -191,14 +191,14 @@ const Portfolio: React.FC = () => {
           {/* Desktop Navigation Buttons */}
           <button
             onClick={prevImage}
-            className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-40 p-3 bg-black/50 text-white rounded-full hover:bg-brand-pink transition-all hover:scale-110 hidden md:flex"
+            className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-40 p-3 bg-black/50 text-white rounded-full hover:bg-brand-cyan transition-all hover:scale-110 hidden md:flex"
           >
             <ChevronLeft size={32} />
           </button>
 
           <button
             onClick={nextImage}
-            className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-40 p-3 bg-black/50 text-white rounded-full hover:bg-brand-pink transition-all hover:scale-110 hidden md:flex"
+            className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-40 p-3 bg-black/50 text-white rounded-full hover:bg-brand-cyan transition-all hover:scale-110 hidden md:flex"
           >
             <ChevronRight size={32} />
           </button>
@@ -217,10 +217,10 @@ const Portfolio: React.FC = () => {
                 src={selectedProject.gallery[currentImageIndex]}
                 alt={`${selectedProject.title} - Imagem ${currentImageIndex + 1}`}
                 className={`max-w-full max-h-full object-contain rounded-xl shadow-2xl transition-all duration-300 ${isTransitioning
-                    ? direction === 'next'
-                      ? 'opacity-0 -translate-x-8'
-                      : 'opacity-0 translate-x-8'
-                    : 'opacity-100 translate-x-0'
+                  ? direction === 'next'
+                    ? 'opacity-0 -translate-x-8'
+                    : 'opacity-0 translate-x-8'
+                  : 'opacity-100 translate-x-0'
                   }`}
               />
             </div>
@@ -231,8 +231,8 @@ const Portfolio: React.FC = () => {
                 <div
                   key={idx}
                   className={`h-1.5 rounded-full transition-all duration-300 ${idx === currentImageIndex
-                      ? 'w-8 bg-brand-pink'
-                      : 'w-1.5 bg-white/30'
+                    ? 'w-8 bg-brand-cyan'
+                    : 'w-1.5 bg-white/30'
                     }`}
                 />
               ))}
@@ -242,7 +242,7 @@ const Portfolio: React.FC = () => {
           {/* Counter */}
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-black/50 backdrop-blur-md px-6 py-2 rounded-full border border-white/10 hidden md:block">
             <p className="text-white font-medium text-sm">
-              <span className="text-brand-pink">{currentImageIndex + 1}</span> / {selectedProject.gallery.length}
+              <span className="text-brand-cyan">{currentImageIndex + 1}</span> / {selectedProject.gallery.length}
             </p>
           </div>
         </div>

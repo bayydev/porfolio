@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Instagram, Send, Mail, MapPin, MessageCircle } from 'lucide-react';
 
 const TypewriterEffect = () => {
-  const phrases = ["único?", "que dê fome?", "que vende?"];
+  const phrases = ["único?", "estratégico?", "que impulsiona?"];
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -35,16 +35,16 @@ const TypewriterEffect = () => {
   }, [currentText, isDeleting, currentPhraseIndex, phrases, typingSpeed]);
 
   return (
-    <span className="text-brand-pink relative">
+    <span className="text-brand-cyan relative">
       {currentText}
-      <span className="animate-cursor-blink ml-1 border-r-2 border-brand-pink h-[0.8em] inline-block align-middle"></span>
+      <span className="animate-cursor-blink ml-1 border-r-2 border-brand-cyan h-[0.8em] inline-block align-middle"></span>
     </span>
   );
 };
 
 const Contact: React.FC = () => {
   return (
-    <footer id="contact" className="bg-black pt-24 pb-12 rounded-t-[3rem] relative -mt-12 z-20">
+    <footer id="contact" className="bg-black pt-32 pb-16 rounded-t-[3rem] relative -mt-12 z-20">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-16 mb-20 items-center">
           <div>
@@ -53,11 +53,11 @@ const Contact: React.FC = () => {
               algo <TypewriterEffect />
             </h2>
             <p className="text-xl text-gray-400 mb-8 max-w-md">
-              Seu delivery merece um visual que desperta o desejo e converte cliques em pedidos. Entre em contato e vamos elevar o nível da sua marca hoje.
+              Sua empresa merece um visual estratégico que gera resultados. Entre em contato e vamos elevar o nível da sua marca hoje.
             </p>
 
             <div className="flex flex-col gap-4">
-              <a href="mailto:contato.visualcaua@gmail.com" className="flex items-center gap-4 text-white hover:text-brand-pink transition-colors p-4 glass-card rounded-xl w-max">
+              <a href="mailto:contato.visualcaua@gmail.com" className="flex items-center gap-4 text-white hover:text-brand-cyan transition-colors p-4 glass-card rounded-xl w-max">
                 <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center">
                   <Mail size={20} />
                 </div>
@@ -73,8 +73,8 @@ const Contact: React.FC = () => {
           </div>
 
           <div className="bg-gradient-to-br from-brand-gray/50 to-brand-black p-8 rounded-[2rem] border border-white/10 flex flex-col items-center justify-center text-center h-full min-h-[400px]">
-            <div className="w-24 h-24 bg-brand-pink/20 rounded-full flex items-center justify-center mb-6 animate-pulse">
-              <MessageCircle size={48} className="text-brand-pink" />
+            <div className="w-24 h-24 bg-brand-cyan/20 rounded-full flex items-center justify-center mb-6 animate-pulse">
+              <MessageCircle size={48} className="text-brand-cyan" />
             </div>
             <h3 className="text-3xl font-black text-white mb-4">Pronto para começar?</h3>
             <p className="text-gray-400 mb-8 max-w-sm">
@@ -93,17 +93,17 @@ const Contact: React.FC = () => {
 
         <div className="border-t border-white/10 pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-2xl font-black tracking-tighter text-white">
-            VISUAL<span className="text-brand-pink">.CAUA</span>
+            VISUAL<span className="text-brand-cyan">.CAUA</span>
           </div>
 
           <div className="flex gap-6">
-            <a href="https://instagram.com/visual.caua" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-brand-pink transition-colors">
+            <a href="https://instagram.com/visual.caua" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-brand-cyan transition-colors">
               <Instagram size={24} />
             </a>
-            <a href="https://be.net/visualcaua" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-brand-pink transition-colors">
+            <a href="https://be.net/visualcaua" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-brand-cyan transition-colors">
               Behance
             </a>
-            <a href="https://wa.me/5527992241844" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-brand-pink transition-colors">
+            <a href="https://wa.me/5527992241844" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-brand-cyan transition-colors">
               WhatsApp
             </a>
           </div>

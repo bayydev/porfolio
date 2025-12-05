@@ -26,7 +26,7 @@ const Header: React.FC = () => {
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         <div className="text-2xl font-black tracking-tighter text-white">
-          VISUAL<span className="text-brand-pink">.CAUA</span>
+          VISUAL<span className="text-brand-cyan">.CAUA</span>
         </div>
 
         {/* Desktop Nav */}
@@ -44,7 +44,7 @@ const Header: React.FC = () => {
             href="https://wa.me/5527992241844"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white text-black px-6 py-2.5 rounded-full font-bold text-sm hover:bg-brand-pink hover:text-white transition-all duration-300"
+            className="bg-white text-black px-6 py-2.5 rounded-full font-bold text-sm hover:bg-brand-cyan hover:text-black transition-all duration-300"
           >
             Orçamento
           </a>
@@ -66,7 +66,7 @@ const Header: React.FC = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-lg font-medium text-gray-300 hover:text-brand-pink transition-colors"
+              className="text-lg font-medium text-gray-300 hover:text-brand-cyan transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               {link.name}
@@ -76,7 +76,7 @@ const Header: React.FC = () => {
             href="https://wa.me/5527992241844"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-brand-pink text-white text-center py-3 rounded-xl font-bold mt-2"
+            className="bg-brand-cyan text-black text-center py-3 rounded-xl font-bold mt-2"
             onClick={() => setMobileMenuOpen(false)}
           >
             Fale Comigo
