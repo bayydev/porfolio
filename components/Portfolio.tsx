@@ -7,14 +7,14 @@ import IMAGES from '../assets/index';
 const projects: ProjectItem[] = [
   {
     id: 1,
-    title: "Estratégia Visual Imobiliária",
+    title: "Feed | Imobiliária",
     category: "Social Media",
     image: IMAGES.acai.cover,
     gallery: IMAGES.acai.gallery
   },
-  { id: 2, title: "Social Media Imobiliária", category: "Social Media", image: IMAGES.confidencial1.cover },
-  { id: 3, title: "Branding Completo", category: "Branding & Social", image: IMAGES.confidencial2.cover },
-  { id: 4, title: "Design Gráfico", category: "Design Gráfico", image: IMAGES.confidencial3.cover },
+  { id: 2, title: "Feed | Açaíteria", category: "Social Media", image: IMAGES.confidencial1.cover },
+  { id: 3, title: "Luz do Sol Gourmet", category: "Identidade Visual", image: IMAGES.confidencial2.cover },
+  { id: 4, title: "Leandro Marques | Corretor de Imóveis", category: "Identidade Visual", image: IMAGES.confidencial3.cover },
 ];
 
 const Portfolio: React.FC = () => {
@@ -273,10 +273,10 @@ const Portfolio: React.FC = () => {
                 src={selectedProject.gallery[currentImageIndex]}
                 alt={`${selectedProject.title} - Imagem ${currentImageIndex + 1}`}
                 className={`max-w-full max-h-full object-contain rounded-xl shadow-2xl transition-all duration-300 ${isTransitioning
-                    ? direction === 'next'
-                      ? 'opacity-0 -translate-x-8'
-                      : 'opacity-0 translate-x-8'
-                    : 'opacity-100 translate-x-0'
+                  ? direction === 'next'
+                    ? 'opacity-0 -translate-x-8'
+                    : 'opacity-0 translate-x-8'
+                  : 'opacity-100 translate-x-0'
                   }`}
               />
             </div>
@@ -287,8 +287,8 @@ const Portfolio: React.FC = () => {
                 <div
                   key={idx}
                   className={`h-1.5 rounded-full transition-all duration-300 ${idx === currentImageIndex
-                      ? 'w-8 bg-brand-cyan'
-                      : 'w-1.5 bg-white/30'
+                    ? 'w-8 bg-brand-cyan'
+                    : 'w-1.5 bg-white/30'
                     }`}
                 />
               ))}

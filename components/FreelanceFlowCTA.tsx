@@ -1,36 +1,37 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Clock, Users, Calculator, Wallet, FileText, GraduationCap, ArrowRight, Rocket } from 'lucide-react';
+import { Clock, Users, Calculator, Wallet, FileText, GraduationCap, ArrowRight, Rocket, TrendingUp, Timer } from 'lucide-react';
 
 const features = [
     {
-        icon: <Clock className="w-6 h-6" />,
-        title: "Blocos de Tempo",
-        description: "Rotina otimizada para seu nicho"
+        icon: <GraduationCap className="w-6 h-6" />,
+        title: "Mentoria & Carreira",
+        description: "Aprenda a vender e prospectar clientes",
+        highlight: true
     },
     {
         icon: <Users className="w-6 h-6" />,
-        title: "CRM de Clientes",
-        description: "Pipeline visual de vendas"
+        title: "Pipeline Visual",
+        description: "CRM com estágios de vendas"
     },
     {
         icon: <Calculator className="w-6 h-6" />,
         title: "Calculadora de Preços",
-        description: "Precificação profissional"
+        description: "Precifique baseado em custos reais"
     },
     {
         icon: <Wallet className="w-6 h-6" />,
-        title: "Módulo Financeiro",
-        description: "Controle de caixa completo"
+        title: "Controle Financeiro",
+        description: "Receitas, despesas e fluxo de caixa"
+    },
+    {
+        icon: <Timer className="w-6 h-6" />,
+        title: "Pomodoro + Daily Win",
+        description: "Produtividade focada"
     },
     {
         icon: <FileText className="w-6 h-6" />,
         title: "Gerador de Contratos",
-        description: "PDFs personalizados"
-    },
-    {
-        icon: <GraduationCap className="w-6 h-6" />,
-        title: "Módulo de Carreira",
-        description: "Conteúdo educacional"
+        description: "PDFs profissionais personalizados"
     }
 ];
 
@@ -122,24 +123,27 @@ const FreelanceFlowCTA: React.FC = () => {
                             <div className="flex flex-col lg:flex-row items-center gap-8">
                                 {/* Left Content */}
                                 <div className="flex-1 text-center lg:text-left">
-                                    <div className="flex items-center justify-center lg:justify-start gap-2 mb-4">
-                                        <div className="w-5 h-5 rounded bg-yellow-400/20 flex items-center justify-center">
-                                            <div className="w-2 h-2 rounded-sm bg-yellow-400" />
-                                        </div>
-                                        <span className="text-sm font-bold text-yellow-400 uppercase tracking-wider">Gerencie sua Carreira</span>
+                                    {/* Result Badge */}
+                                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 mb-4">
+                                        <TrendingUp className="w-4 h-4 text-green-400" />
+                                        <span className="text-sm font-bold text-green-400">R$ 793,86 em 15 dias saindo do completo 0</span>
                                     </div>
 
                                     <h3 className="text-2xl md:text-3xl font-black text-white mb-4">
-                                        Tudo que você precisa para <br className="hidden md:block" />
-                                        <span className="text-brand-cyan">escalar como freelancer</span>
+                                        Aprenda a <span className="text-brand-cyan">vender seus serviços</span><br className="hidden md:block" />
+                                        e escale como freelancer
                                     </h3>
+
+                                    <p className="text-gray-400 mb-6 text-sm md:text-base">
+                                        A <strong className="text-white">Mentoria de Carreira</strong> tem 3 módulos <strong className="text-green-400">100% grátis</strong> ensinando prospecção, abordagem e fechamento de vendas.
+                                    </p>
 
                                     <ul className="space-y-3 mb-6 text-left">
                                         {[
-                                            "Blocos de tempo inteligentes (B2B ou B2C)",
-                                            "CRM completo com pipeline visual",
-                                            "Calculadora de preços profissional",
-                                            "Timer Pomodoro integrado + Daily Win"
+                                            "Mentoria de Vendas com 3 módulos grátis",
+                                            "Pipeline visual",
+                                            "Calculadora de preços baseada em custos reais",
+                                            "Controle financeiro completo + Pomodoro"
                                         ].map((item, i) => (
                                             <li key={i} className="flex items-center gap-3 text-gray-300">
                                                 <div className="w-5 h-5 rounded-full bg-brand-cyan/20 flex items-center justify-center flex-shrink-0">
