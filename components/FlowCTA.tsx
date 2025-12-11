@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Clock, Users, Calculator, Wallet, FileText, GraduationCap, ArrowRight, Rocket, TrendingUp, Timer } from 'lucide-react';
+import { Clock, Users, Calculator, Wallet, FileText, GraduationCap, ArrowRight, Rocket, TrendingUp, Timer, Target, LayoutDashboard } from 'lucide-react';
 
 const features = [
     {
@@ -9,9 +9,14 @@ const features = [
         highlight: true
     },
     {
+        icon: <Target className="w-6 h-6" />,
+        title: "Qualificador de Leads",
+        description: "Classifique e priorize seus leads"
+    },
+    {
         icon: <Users className="w-6 h-6" />,
-        title: "Pipeline Visual",
-        description: "CRM com estágios de vendas"
+        title: "CRM de Bolso",
+        description: "Pipeline visual com estágios de vendas"
     },
     {
         icon: <Calculator className="w-6 h-6" />,
@@ -20,7 +25,7 @@ const features = [
     },
     {
         icon: <Wallet className="w-6 h-6" />,
-        title: "Controle Financeiro",
+        title: "Centro Financeiro",
         description: "Receitas, despesas e fluxo de caixa"
     },
     {
@@ -32,10 +37,15 @@ const features = [
         icon: <FileText className="w-6 h-6" />,
         title: "Gerador de Contratos",
         description: "PDFs profissionais personalizados"
+    },
+    {
+        icon: <LayoutDashboard className="w-6 h-6" />,
+        title: "Protocolo do Dia",
+        description: "Rotina diária inteligente B2B/B2C"
     }
 ];
 
-const FreelanceFlowCTA: React.FC = () => {
+const FlowCTA: React.FC = () => {
     const sectionRef = useRef<HTMLDivElement>(null);
     const [isVisible, setIsVisible] = useState(false);
 
@@ -86,12 +96,12 @@ const FreelanceFlowCTA: React.FC = () => {
                     {/* Badge */}
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-brand-cyan/20 to-purple-500/20 border border-brand-cyan/30 mb-6 animate-pulse-soft">
                         <Rocket className="w-4 h-4 text-brand-cyan" />
-                        <span className="text-sm font-bold text-brand-cyan uppercase tracking-wider">Nova Plataforma</span>
+                        <span className="text-sm font-bold text-brand-cyan uppercase tracking-wider">Minha Plataforma</span>
                     </div>
 
                     <h2 className="text-4xl md:text-6xl font-black text-white mb-4 leading-tight">
                         Conheça o{' '}
-                        <span className="gradient-text-animated">FreelanceFlow</span>
+                        <span className="gradient-text-animated">Flow</span>
                     </h2>
 
                     <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
@@ -100,18 +110,18 @@ const FreelanceFlowCTA: React.FC = () => {
                 </div>
 
                 {/* Features Grid */}
-                <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12 stagger-children ${isVisible ? 'visible' : ''}`}>
+                <div className={`grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 mb-12 stagger-children ${isVisible ? 'visible' : ''}`}>
                     {features.map((feature, index) => (
                         <div
                             key={index}
-                            className="cyberpunk-card rounded-2xl p-5 text-center card-hover group cursor-default"
+                            className="cyberpunk-card rounded-2xl p-4 text-center card-hover group cursor-default"
                             style={{ transitionDelay: `${index * 100}ms` }}
                         >
-                            <div className="w-12 h-12 mx-auto mb-3 rounded-xl bg-gradient-to-br from-brand-cyan/20 to-purple-500/20 flex items-center justify-center text-brand-cyan group-hover:scale-110 transition-transform duration-300">
+                            <div className="w-10 h-10 mx-auto mb-2 rounded-xl bg-gradient-to-br from-brand-cyan/20 to-purple-500/20 flex items-center justify-center text-brand-cyan group-hover:scale-110 transition-transform duration-300">
                                 {feature.icon}
                             </div>
-                            <h4 className="text-sm font-bold text-white mb-1">{feature.title}</h4>
-                            <p className="text-xs text-gray-500 leading-tight">{feature.description}</p>
+                            <h4 className="text-xs font-bold text-white mb-1">{feature.title}</h4>
+                            <p className="text-[10px] text-gray-500 leading-tight">{feature.description}</p>
                         </div>
                     ))}
                 </div>
@@ -141,9 +151,9 @@ const FreelanceFlowCTA: React.FC = () => {
                                     <ul className="space-y-3 mb-6 text-left">
                                         {[
                                             "Mentoria de Vendas com 3 módulos grátis",
-                                            "Pipeline visual",
+                                            "Qualificador de Leads + CRM Visual",
                                             "Calculadora de preços baseada em custos reais",
-                                            "Controle financeiro completo + Pomodoro"
+                                            "Controle financeiro + Gerador de Contratos"
                                         ].map((item, i) => (
                                             <li key={i} className="flex items-center gap-3 text-gray-300">
                                                 <div className="w-5 h-5 rounded-full bg-brand-cyan/20 flex items-center justify-center flex-shrink-0">
@@ -163,7 +173,7 @@ const FreelanceFlowCTA: React.FC = () => {
                                         rel="noopener noreferrer"
                                         className="group relative btn-cyberpunk text-white font-black text-lg md:text-xl px-10 py-5 rounded-2xl flex items-center gap-3 shimmer-button animate-glow-cyberpunk"
                                     >
-                                        <span>ACESSAR PLATAFORMA</span>
+                                        <span>ACESSAR FLOW</span>
                                         <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
                                     </a>
 
@@ -186,4 +196,4 @@ const FreelanceFlowCTA: React.FC = () => {
     );
 };
 
-export default FreelanceFlowCTA;
+export default FlowCTA;

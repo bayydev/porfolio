@@ -5,7 +5,7 @@ import Hero from './components/Hero';
 import Stats from './components/Stats';
 import Services from './components/Services';
 import Portfolio from './components/Portfolio';
-import FreelanceFlowCTA from './components/FreelanceFlowCTA';
+import FlowCTA from './components/FlowCTA';
 import Contact from './components/Contact';
 
 const App: React.FC = () => {
@@ -42,7 +42,7 @@ const App: React.FC = () => {
         <Stats />
         <Services />
         <Portfolio />
-        <FreelanceFlowCTA />
+        <FlowCTA />
       </main>
       <Contact />
 
