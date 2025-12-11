@@ -140,8 +140,9 @@ const FlowCTA: React.FC = () => {
                                     </div>
 
                                     <h3 className="text-2xl md:text-3xl font-black text-white mb-4">
-                                        Aprenda a <span className="text-brand-cyan">vender seus serviços</span><br className="hidden md:block" />
-                                        e escale como freelancer
+                                        Aprenda a <span className="text-brand-cyan">vender seus serviços</span>
+                                        <br className="hidden md:block" />
+                                        {' '}e escale como freelancer
                                     </h3>
 
                                     <p className="text-gray-400 mb-6 text-sm md:text-base">
